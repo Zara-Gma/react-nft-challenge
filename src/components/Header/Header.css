@@ -10,7 +10,7 @@
   margin: 10px;
 }
 
-.punkLogo {
+.logo {
   width: 200px;
 }
 
@@ -23,12 +23,11 @@
   align-items: center;
 }
 
-.searchBarContainer {
+.search-icon-container {
   margin: 10px;
 }
-
-.searchInput {
-  background-color: transparent;
+.inputBar {
+  background: transparent;
   border: none;
   width: 100%;
   outline: none;
@@ -36,41 +35,40 @@
   font-size: 16px;
 }
 
-.headerItems {
+.header-items {
   display: flex;
   color: #a1a5b0;
 }
 
-.headerItems > p {
+.header-items > p {
   margin: 10px;
 }
 
-.headerActions {
+.header-actions {
   display: flex;
   align-items: center;
 }
 
-.headerActions > div {
+.header-actions > div {
   margin: 10px;
 }
 
-.themeSwitchContainer {
-  display: flex;
+.theme-logo-container {
   background-color: #1c1c1e;
-  border-radius: 50px;
-  padding: 15px;
+  border-radius: 50%;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   object-fit: contain;
 }
 
-.themeSwitchContainer > img {
+.theme-logo-container > img {
   height: 25px;
 }
 
-.loginButton {
-    background: linear-gradient(to right, #59f9b7, #66feea);
-    padding: 15px 40px;
-    border-radius: 50px;
-    color: black;
+.login {
+  background: linear-gradient(to right, #59f9b7, #66feea);
+  color: black;
+  padding: 15px 40px;
+  border-radius: 50px;
 }

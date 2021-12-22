@@ -12,7 +12,7 @@ const Header = () => {
       </div>
       <div className="searchBar">
         <div className="searchIconContainer">
-          <img src={searchIcon} />
+          <img src={searchIcon} alt="search Icon"/>
         </div>
         <input
           className="searchInput"
@@ -26,7 +26,7 @@ const Header = () => {
       </div>
       <div className="headerActions">
         <div className="themeSwitchContainer">
-          <img src={themeSwitchIcon} />
+          <img src={themeSwitchIcon} alt="switch button"/>
         </div>
       </div>
       <div className="loginButton">GET IN</div>
