@@ -13,7 +13,7 @@ function CollectionCard({ id, name, traits, image }) {
         </div>
       </div>
       <div className="priceContainer">
-      <img src={weth} className="wethImage" alt="weth" />
+        <img src={weth} className="wethImage" alt="weth" />
         <div className="price">{traits[0]?.value}</div>
       </div>
     </div>

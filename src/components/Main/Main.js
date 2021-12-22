@@ -5,7 +5,7 @@ import twitterLogo from "../../assets/owner/twitter.png";
 import moreIcon from "../../assets/owner/more.png";
 import "./Main.css";
 
-function Main({ selectedPunk, punkListData }) {
+const Main = ({ selectedPunk, punkListData }) => {
   const [activePunk, setActivePunk] = useState(punkListData[0]);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function Main({ selectedPunk, punkListData }) {
 
             <div className="ownerDetails">
               <div className="ownerNameAndHandle">
-              <div className='ownerAddress'>{activePunk.owner.address}</div>
+                <div className="ownerAddress">{activePunk.owner.address}</div>
                 <div className="ownerHandle">@zaragman</div>
               </div>
               <div className="ownerLink">
@@ -53,6 +53,6 @@ function Main({ selectedPunk, punkListData }) {
       </div>
     </div>
   );
-}
+};
 
 export default Main;
