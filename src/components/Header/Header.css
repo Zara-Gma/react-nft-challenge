@@ -10,7 +10,7 @@
   margin: 10px;
 }
 
-.logo {
+.punkLogo {
   width: 200px;
 }
 
@@ -23,10 +23,10 @@
   align-items: center;
 }
 
-.search-icon-container {
+.searchIconContainer {
   margin: 10px;
 }
-.inputBar {
+.searchInput {
   background: transparent;
   border: none;
   width: 100%;
@@ -35,25 +35,25 @@
   font-size: 16px;
 }
 
-.header-items {
+.headerItems {
   display: flex;
   color: #a1a5b0;
 }
 
-.header-items > p {
+.headerItems > p {
   margin: 10px;
 }
 
-.header-actions {
+.headerActions {
   display: flex;
   align-items: center;
 }
 
-.header-actions > div {
+.headerActions > div {
   margin: 10px;
 }
 
-.theme-logo-container {
+.themeLogoContainer {
   background-color: #1c1c1e;
   border-radius: 50%;
   padding: 10px;
@@ -62,11 +62,11 @@
   object-fit: contain;
 }
 
-.theme-logo-container > img {
+.themeLogoContainer > img {
   height: 25px;
 }
 
-.login {
+.loginButton {
   background: linear-gradient(to right, #59f9b7, #66feea);
   color: black;
   padding: 15px 40px;

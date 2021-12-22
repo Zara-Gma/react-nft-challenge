@@ -1,38 +1,41 @@
 import React from "react";
-import instagramLogo from "../assets/owner/instagram.png";
-import twitterLogo from "../assets/owner/twitter.png";
-import moreIcon from "../assets/owner/more.png";
-import './Main.css';
+import { useState, useEffect } from "react/cjs/react.development";
+import instagramLogo from "../../assets/owner/instagram.png";
+import twitterLogo from "../../assets/owner/twitter.png";
+import moreIcon from "../../assets/owner/more.png";
+import "./Main.css";
 
-const Main = () => {
+function Main({ selectedPunk, punkListData }) {
+  const [activePunk, setActivePunk] = useState(punkListData[0]);
+
+  useEffect(() => {
+    setActivePunk(punkListData[selectedPunk]);
+  }, [punkListData, selectedPunk]);
+
   return (
     <div className="main">
       <div className="mainContent">
         <div className="punkHighlight">
           <div className="punkContainer">
             <img
+              src={activePunk.image_original_url}
               className="selectedPunk"
-              src="https://lh3.googleusercontent.com/WrmpbMJMKmGfjJRCu2b0Bp_Pk2iPZcuRXyqPj7p3-I19DKHlIluigjdiwsnUZA28ssIQcydOnYgD2f6Qra05gFMZHWuojV1JSbM=w285"
               alt=""
-            />
+            ></img>
           </div>
         </div>
+
         <div className="punkDetails">
-          style={{ color: "#white" }}
-          <div className="title">
-            Bandana Punk
-            <span className="itemNumber">.#3</span>
-          </div>
+          <div className="title">{activePunk.name}</div>
+          <span className="itemNumber">#{activePunk.token_id}</span>
           <div className="owner">
             <div className="ownerImageContainer">
-              <img
-                src="https://lh3.googleusercontent.com/9B1oTFEv4DeaW9gFwnd1ION2NzfGnC9lHfjnPNSbNkDZmID0P7Di6Y6ptZxZuf0oaWgnAKLu1eqEbdlCJSpHDFUceo2D7H9c0wK56Q=w600"
-                alt=""
-              />
+              <img src={activePunk.owner.profile_img_url} alt=""></img>
             </div>
+
             <div className="ownerDetails">
               <div className="ownerNameAndHandle">
-                <div>Contract address</div>
+              <div className='ownerAddress'>{activePunk.owner.address}</div>
                 <div className="ownerHandle">@zaragman</div>
               </div>
               <div className="ownerLink">
@@ -50,6 +53,6 @@ const Main = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Main;
